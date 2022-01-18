@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.calculator-grid {
+  display: -ms-grid;
+  display: grid;
+  width: 320px;
+  height: 400px;
+  -ms-grid-columns: (80px)[4];
+      grid-template-columns: repeat(4, 80px);
+  -ms-grid-rows: minmax(100px, auto) (80px)[5];
+      grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+}
+
+.calculator-grid button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  border: 1px solid black;
+  color: white;
+  background: #120458;
+  outline: none;
+  -webkit-transition: 0.2 ease;
+  transition: 0.2 ease;
+}
+
+.calculator-grid button:hover {
+  background: #ff00a0;
+  -webkit-transition: 0.2 ease;
+  transition: 0.2 ease;
+}
+
+.calculator-grid .span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1/-1;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.897);
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=style.css.map */
